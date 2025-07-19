@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Users, GraduationCap } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Users, GraduationCap } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -11,21 +11,23 @@ export default function Hero() {
           <div className="space-y-8">
             <div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight font-playfair">
-                El Método <span className="text-orange-500">AdulMa</span>
+                El Método <span className="text-orange-400">AdulMa</span>
               </h1>
-              <p className="text-2xl text-gray-600 mt-4">Movimiento y mente para adultos mayores</p>
+              <p className="text-2xl text-gray-600 mt-4">
+                Movimiento y mente para adultos mayores
+              </p>
             </div>
 
             <p className="text-xl text-gray-700 leading-relaxed max-w-xl">
-              Sistema integral que combina ejercicio físico y estimulación cognitiva para promover un envejecimiento
-              activo y saludable.
+              Sistema integral que combina ejercicio físico y estimulación
+              cognitiva para promover un envejecimiento activo y saludable.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/clases">
                 <Button
                   size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+                  className="bg-orange-400 hover:bg-orange-600 text-white px-8 py-4 text-lg rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
                 >
                   <Users className="w-5 h-5 mr-2" />
                   Conocé nuestras clases
@@ -47,16 +49,24 @@ export default function Hero() {
 
             <div className="flex items-center space-x-12 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-500 font-playfair">5+</div>
+                <div className="text-3xl font-bold text-orange-400 font-playfair">
+                  5+
+                </div>
                 <div className="text-sm text-gray-600">Años de experiencia</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-500 font-playfair">200+</div>
+                <div className="text-3xl font-bold text-orange-400 font-playfair">
+                  200+
+                </div>
                 <div className="text-sm text-gray-600">Alumnos activos</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-500 font-playfair">50+</div>
-                <div className="text-sm text-gray-600">Instructores formados</div>
+                <div className="text-3xl font-bold text-orange-400 font-playfair">
+                  50+
+                </div>
+                <div className="text-sm text-gray-600">
+                  Instructores formados
+                </div>
               </div>
             </div>
           </div>
@@ -74,5 +84,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
