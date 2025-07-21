@@ -77,27 +77,27 @@ export default function TestimoniosPage() {
   return (
     <div className="pt-32 pb-16 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-playfair">Testimonios Reales</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-playfair">Testimonios Reales</h1>
+        <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
           Conoce las experiencias de nuestros alumnos y cómo el Método AdulMa ha transformado sus vidas
         </p>
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 font-playfair">Lo Que Dicen Nuestros Alumnos</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 font-playfair">Lo Que Dicen Nuestros Alumnos</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+            <Card key={index} className="p-6 hover:shadow-lg transition-shadow border border-gray-50">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-gray-900 text-lg">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">
+                <p className="text-gray-600 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
+                <div className="border-t border-gray-50 pt-4">
+                  <p className="font-semibold text-gray-800 text-lg">{testimonial.name}</p>
+                  <p className="text-sm text-gray-500">
                     {testimonial.age} años • {testimonial.months} meses en el programa
                   </p>
                 </div>
@@ -108,12 +108,12 @@ export default function TestimoniosPage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 font-playfair">Videos Testimoniales</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 font-playfair">Videos Testimoniales</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {videoTestimonials.map((video, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-50"
             >
               <div className="relative">
                 <Image
@@ -124,7 +124,7 @@ export default function TestimoniosPage() {
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                  <Button size="lg" className="rounded-full w-16 h-16">
+                  <Button size="lg" className="rounded-full w-16 h-16 bg-orange-400 hover:bg-orange-500">
                     <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
@@ -135,7 +135,7 @@ export default function TestimoniosPage() {
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="font-semibold text-gray-900">{video.title}</h3>
+                <h3 className="font-semibold text-gray-800">{video.title}</h3>
               </div>
             </div>
           ))}
@@ -143,7 +143,7 @@ export default function TestimoniosPage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 font-playfair">Galería de Momentos</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 font-playfair">Galería de Momentos</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[...Array(8)].map((_, index) => (
             <div key={index} className="relative aspect-square">
@@ -159,16 +159,16 @@ export default function TestimoniosPage() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-8 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 font-playfair">¿Quieres Ser Parte de Estas Historias?</h2>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+      <div className="bg-gradient-to-r from-orange-25 to-orange-50 rounded-lg p-8 text-center border border-orange-100">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 font-playfair">¿Quieres Ser Parte de Estas Historias?</h2>
+        <p className="text-xl text-gray-500 mb-8 max-w-2xl mx-auto">
           Únete a nuestra comunidad y comienza tu propia transformación. ¡Tu testimonio podría ser el próximo!
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="text-lg px-8 py-4">
+          <Button size="lg" className="text-lg px-8 py-4 bg-orange-400 hover:bg-orange-500">
             Conocer Nuestras Clases
           </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-transparent">
+          <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-transparent border-gray-200 hover:border-orange-300 text-gray-600 hover:text-orange-500">
             Contactar por WhatsApp
           </Button>
         </div>

@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-12">
           {/* Logo y descripción */}
@@ -21,14 +21,14 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-            <p className="text-gray-300 mb-8 max-w-md leading-relaxed text-lg">
+            <p className="text-gray-200 mb-8 max-w-md leading-relaxed text-lg">
               Sistema integral de actividad física y estimulación cognitiva para
               adultos mayores. Promovemos el envejecimiento activo y saludable.
             </p>
             <div className="flex space-x-4">
               <Link
                 href="#"
-                className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-orange-400 transition-colors duration-300"
+                className="w-12 h-12 bg-gray-700 rounded-xl flex items-center justify-center hover:bg-orange-400 transition-colors duration-300"
               >
                 <svg
                   className="h-6 w-6 text-white"
@@ -40,7 +40,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="#"
-                className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-orange-400 transition-colors duration-300"
+                className="w-12 h-12 bg-gray-700 rounded-xl flex items-center justify-center hover:bg-orange-400 transition-colors duration-300"
               >
                 <svg
                   className="h-6 w-6 text-white"
@@ -62,7 +62,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/el-metodo"
-                  className="text-gray-300 hover:text-orange-400 transition-colors"
+                  className="text-gray-200 hover:text-orange-400 transition-colors"
                 >
                   El Método
                 </Link>
@@ -70,7 +70,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/clases"
-                  className="text-gray-300 hover:text-orange-400 transition-colors"
+                  className="text-gray-200 hover:text-orange-400 transition-colors"
                 >
                   Clases
                 </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/formacion"
-                  className="text-gray-300 hover:text-orange-400 transition-colors"
+                  className="text-gray-200 hover:text-orange-400 transition-colors"
                 >
                   Formación
                 </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/testimonios"
-                  className="text-gray-300 hover:text-orange-400 transition-colors"
+                  className="text-gray-200 hover:text-orange-400 transition-colors"
                 >
                   Testimonios
                 </Link>
@@ -100,38 +100,38 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
-                <div className="text-gray-300">
+                <div className="text-gray-200">
                   <p>Av. Maipú 1234</p>
                   <p>Olivos, Buenos Aires</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                <p className="text-gray-300">+54 11 2345-6789</p>
+                <p className="text-gray-200">+54 11 2345-6789</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                <p className="text-gray-300">info@elmetodoadulma.com</p>
+                <p className="text-gray-200">info@elmetodoadulma.com</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               © {currentYear} El Método AdulMa. Todos los derechos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 href="/privacidad"
-                className="text-gray-400 hover:text-orange-400 text-sm transition-colors"
+                className="text-gray-300 hover:text-orange-400 text-sm transition-colors"
               >
                 Política de Privacidad
               </Link>
               <Link
                 href="/terminos"
-                className="text-gray-400 hover:text-orange-400 text-sm transition-colors"
+                className="text-gray-300 hover:text-orange-400 text-sm transition-colors"
               >
                 Términos de Uso
               </Link>
