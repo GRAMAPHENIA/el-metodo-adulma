@@ -4,13 +4,14 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center px-4 bg-zinc-25 pt-20">
+    <section className="min-h-screen flex items-center px-4 bg-zinc-25 pt-32 lg:pt-20">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-zinc-800 leading-tight font-playfair">
-                El Método <span className="text-amber-400">AdulMa</span>
+              <h1 className="text-6xl md:text-7xl font-bold text-zinc-800 leading-tight font-playfair">
+                El Método{" "}
+                <span className="text-amber-400 block md:inline">AdulMa</span>
               </h1>
             </div>
 
