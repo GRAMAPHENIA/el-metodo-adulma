@@ -49,9 +49,7 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-          isScrolled
-            ? "border-b border-zinc-200/50 bg-white/80 shadow-sm backdrop-blur-lg"
-            : ""
+          isScrolled ? "shadow-lg bg-amber-500/50 backdrop-blur-xl" : ""
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,20 +61,19 @@ export default function Header() {
                 alt="El Método AdulMa"
                 width={180}
                 height={180}
-                className="h-10 w-20 rounded-xl object-cover"
+                className="h-10 w-20 rounded-lg object-cover"
                 priority
               />
             </Link>
 
             {/* CTA + Menu Button */}
             <div className="flex items-center space-x-4">
-              
               <Link href="/contacto" className="hidden sm:block">
                 <Button
                   size="sm"
                   className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 group ${
                     isScrolled
-                      ? "bg-zinc-800 hover:bg-zinc-900 text-white"
+                      ? "bg-zinc-800/80 backdrop-blur-xl hover:bg-zinc-900/80 text-white"
                       : "bg-white/90 hover:bg-white text-zinc-800 border border-zinc-200/80"
                   }`}
                 >
@@ -86,13 +83,12 @@ export default function Header() {
               </Link>
 
               <Button
-                variant="ghost"
                 size="icon"
                 onClick={() => setIsMenuOpen(true)}
-                className={`rounded-full transition-colors duration-300 ${
+                className={`rounded-full transition-all duration-300 ${
                   isScrolled
-                    ? "text-zinc-600 hover:bg-zinc-100"
-                    : "text-zinc-800 hover:bg-black/10"
+                    ? "bg-zinc-800/80 backdrop-blur-xl hover:bg-zinc-900/80 text-white"
+                    : "bg-white/90 hover:bg-white text-zinc-800 border border-zinc-200/80"
                 }`}
               >
                 <span className="sr-only">Abrir menú</span>
