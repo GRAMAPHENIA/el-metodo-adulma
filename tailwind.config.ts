@@ -67,7 +67,7 @@ const config: Config = {
   				ring: 'hsl(var(--sidebar-ring))'
   			},
   			// Soft color palette for accessibility
-  			gray: {
+  			zinc: {
   				25: '#fafafa',
   				50: '#f9fafb',
   				100: '#f3f4f6',
@@ -80,7 +80,7 @@ const config: Config = {
   				800: '#1f2937',
   				900: '#111827',
   			},
-  			orange: {
+  			amber: {
   				25: '#fffcf5',
   				50: '#fff7ed',
   				100: '#ffedd5',

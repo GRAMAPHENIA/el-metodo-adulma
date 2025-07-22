@@ -52,13 +52,13 @@ export default function ClasesPage() {
   ];
 
   return (
-    <div className="pt-32 pb-20 px-4 bg-gray-25">
+    <div className="pt-32 pb-20 px-4 bg-zinc-25">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-800 mb-6 font-playfair">
+          <h1 className="text-5xl font-bold text-zinc-800 mb-6 font-playfair">
             Nuestras Clases
           </h1>
-          <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-zinc-500 max-w-3xl mx-auto leading-relaxed">
             Clases grupales en un ambiente cálido y profesional, adaptadas a las
             necesidades de cada participante
           </p>
@@ -66,27 +66,27 @@ export default function ClasesPage() {
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 font-playfair">
+            <h2 className="text-3xl font-bold text-zinc-800 mb-8 font-playfair">
               Horarios Disponibles
             </h2>
             <div className="space-y-6">
               {schedules.map((schedule, index) => (
                 <Card
                   key={index}
-                  className="border border-gray-50 hover:shadow-lg transition-shadow duration-300"
+                  className="border border-zinc-50 hover:shadow-lg transition-shadow duration-300"
                 >
                   <CardContent className="p-8">
                     <CardTitle className="flex items-center gap-3 text-xl mb-4">
-                      <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center">
-                        <Clock className="w-6 h-6 text-orange-400" />
+                      <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center">
+                        <Clock className="w-6 h-6 text-amber-400" />
                       </div>
                       {schedule.days}
                     </CardTitle>
                     <div className="space-y-4">
-                      <p className="text-2xl font-semibold text-orange-400">
+                      <p className="text-2xl font-semibold text-amber-400">
                         {schedule.time}
                       </p>
-                      <p className="text-lg text-gray-500">
+                      <p className="text-lg text-zinc-500">
                         Turno {schedule.period}
                       </p>
                       <div className="flex items-center gap-2">
@@ -109,30 +109,30 @@ export default function ClasesPage() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 font-playfair">
+            <h2 className="text-3xl font-bold text-zinc-800 mb-8 font-playfair">
               ¿Qué Incluye Cada Clase?
             </h2>
             <div className="space-y-6">
               {classContent.map((content, index) => (
                 <Card
                   key={index}
-                  className="border border-gray-50 hover:shadow-lg transition-shadow duration-300"
+                  className="border border-zinc-50 hover:shadow-lg transition-shadow duration-300"
                 >
                   <CardContent className="p-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center">
-                        <content.icon className="w-6 h-6 text-orange-400" />
+                      <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center">
+                        <content.icon className="w-6 h-6 text-amber-400" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-800">
+                        <h3 className="text-xl font-semibold text-zinc-800">
                           {content.title}
                         </h3>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm text-zinc-500">
                           {content.duration}
                         </p>
                       </div>
                     </div>
-                    <ul className="space-y-2 text-gray-600">
+                    <ul className="space-y-2 text-zinc-600">
                       {content.items.map((item, itemIndex) => (
                         <li key={itemIndex}>• {item}</li>
                       ))}
@@ -144,29 +144,29 @@ export default function ClasesPage() {
           </div>
         </div>
 
-        <Card className="border border-gray-50 shadow-lg mb-12">
+        <Card className="border border-zinc-50 shadow-lg mb-12">
           <CardContent className="p-12">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-8 font-playfair">
+            <h2 className="text-3xl font-bold text-center text-zinc-800 mb-8 font-playfair">
               Ubicación
             </h2>
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-start gap-3 mb-6">
-                  <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-orange-400" />
+                  <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-amber-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    <h3 className="text-xl font-semibold text-zinc-800 mb-2">
                       Nuestro Espacio
                     </h3>
-                    <p className="text-gray-600 text-lg leading-relaxed">
+                    <p className="text-zinc-600 text-lg leading-relaxed">
                       Av. Maipú 1234, Olivos
                       <br />
                       Buenos Aires, Argentina
                     </p>
                   </div>
                 </div>
-                <div className="space-y-4 text-gray-600">
+                <div className="space-y-4 text-zinc-600">
                   <p>
                     <strong>Transporte público:</strong> Estación Olivos (Tren
                     Mitre) a 3 cuadras. Múltiples líneas de colectivo.
@@ -176,8 +176,8 @@ export default function ClasesPage() {
                   </p>
                 </div>
               </div>
-              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-400">
+              <div className="bg-zinc-100 rounded-xl h-64 flex items-center justify-center">
+                <p className="text-zinc-400">
                   Mapa interactivo de la ubicación
                 </p>
               </div>
@@ -186,10 +186,10 @@ export default function ClasesPage() {
         </Card>
 
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 font-playfair">
+          <h2 className="text-3xl font-bold text-zinc-800 mb-6 font-playfair">
             ¿Listo para Comenzar?
           </h2>
-          <p className="text-xl text-gray-500 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-zinc-500 mb-8 max-w-2xl mx-auto">
             Reserva tu lugar o consulta sobre nuestras clases. ¡Te esperamos
             para comenzar juntos este camino!
           </p>
@@ -200,7 +200,7 @@ export default function ClasesPage() {
           >
             <Button
               size="lg"
-              className="bg-orange-400 hover:bg-orange-500 text-white px-8 py-4 text-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
+              className="bg-amber-400 hover:bg-amber-500 text-white px-8 py-4 text-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
             >
               <Phone className="w-5 h-5 mr-2" />
               Reservar por WhatsApp

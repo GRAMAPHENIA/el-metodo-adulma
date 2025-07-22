@@ -1,24 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, GraduationCap } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center px-4 bg-gray-25 pt-20">
+    <section className="min-h-screen flex items-center px-4 bg-zinc-25 pt-20">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-800 leading-tight font-playfair">
-                El Método <span className="text-orange-400">AdulMa</span>
+              <h1 className="text-5xl md:text-6xl font-bold text-zinc-800 leading-tight font-playfair">
+                El Método <span className="text-amber-400">AdulMa</span>
               </h1>
-              <p className="text-2xl text-gray-500 mt-4">
-                Movimiento y mente para adultos mayores
-              </p>
             </div>
 
-            <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
+            <p className="text-xl text-zinc-600 leading-relaxed max-w-xl">
               Sistema integral que combina ejercicio físico y estimulación
               cognitiva para promover un envejecimiento activo y saludable.
             </p>
@@ -27,7 +23,7 @@ export default function Hero() {
               <Link href="/clases">
                 <Button
                   size="lg"
-                  className="bg-orange-400 hover:bg-orange-500 text-white px-8 py-4 text-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
+                  className="bg-amber-400 hover:bg-amber-500 text-white px-8 py-4 text-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
                 >
                   <Users className="w-5 h-5 mr-2" />
                   Conocé nuestras clases
@@ -39,7 +35,7 @@ export default function Hero() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-gray-200 hover:border-orange-300 bg-white text-gray-600 hover:text-orange-500 px-8 py-4 text-lg rounded-xl hover:shadow-sm transition-all duration-200"
+                  className="border-2 border-zinc-200 hover:border-amber-300 bg-white text-zinc-600 hover:text-amber-500 px-8 py-4 text-lg rounded-xl hover:shadow-sm transition-all duration-200"
                 >
                   <GraduationCap className="w-5 h-5 mr-2" />
                   Formate como instructor
@@ -49,22 +45,22 @@ export default function Hero() {
 
             <div className="flex items-center space-x-12 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 font-playfair">
+                <div className="text-3xl font-bold text-amber-400 font-playfair">
                   5+
                 </div>
-                <div className="text-sm text-gray-500">Años de experiencia</div>
+                <div className="text-sm text-zinc-500">Años de experiencia</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 font-playfair">
+                <div className="text-3xl font-bold text-amber-400 font-playfair">
                   200+
                 </div>
-                <div className="text-sm text-gray-500">Alumnos activos</div>
+                <div className="text-sm text-zinc-500">Alumnos activos</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 font-playfair">
+                <div className="text-3xl font-bold text-amber-400 font-playfair">
                   50+
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-zinc-500">
                   Instructores formados
                 </div>
               </div>
@@ -72,14 +68,20 @@ export default function Hero() {
           </div>
 
           <div className="relative flex justify-center">
-            <Image
-              src="/placeholder.svg?height=600&width=500"
-              alt="Adultos mayores participando en actividades del Método AdulMa"
-              width={500}
-              height={600}
-              className="rounded-2xl shadow-xl"
-              priority
-            />
+            <div className="relative w-full max-w-lg">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-[350px] object-cover rounded-2xl shadow-xl opacity-80"
+                poster="/galeria/01.webp"
+              >
+                <source src="/video-hero/hero.mp4" type="video/mp4" />
+                Tu navegador no soporta el elemento de video.
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+            </div>
           </div>
         </div>
       </div>

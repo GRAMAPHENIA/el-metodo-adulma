@@ -1,8 +1,10 @@
 import type { Metadata } from "next"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Star } from "lucide-react"
+import { Star, Play } from "lucide-react"
 import Image from "next/image"
+import Gallery from "@/components/sections/gallery"
+import VisualTestimonials from "@/components/sections/visual-testimonials"
 
 export const metadata: Metadata = {
   title: "Testimonios",
@@ -77,27 +79,27 @@ export default function TestimoniosPage() {
   return (
     <div className="pt-32 pb-16 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-playfair">Testimonios Reales</h1>
-        <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
+        <h1 className="text-4xl md:text-5xl font-bold text-zinc-800 mb-6 font-playfair">Testimonios Reales</h1>
+        <p className="text-xl text-zinc-500 max-w-3xl mx-auto leading-relaxed">
           Conoce las experiencias de nuestros alumnos y cómo el Método AdulMa ha transformado sus vidas
         </p>
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 font-playfair">Lo Que Dicen Nuestros Alumnos</h2>
+        <h2 className="text-3xl font-bold text-center text-zinc-800 mb-12 font-playfair">Lo Que Dicen Nuestros Alumnos</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-shadow border border-gray-50">
+            <Card key={index} className="p-6 hover:shadow-lg transition-shadow border border-zinc-50">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
-                <div className="border-t border-gray-50 pt-4">
-                  <p className="font-semibold text-gray-800 text-lg">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">
+                <p className="text-zinc-600 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
+                <div className="border-t border-zinc-50 pt-4">
+                  <p className="font-semibold text-zinc-800 text-lg">{testimonial.name}</p>
+                  <p className="text-sm text-zinc-500">
                     {testimonial.age} años • {testimonial.months} meses en el programa
                   </p>
                 </div>
@@ -107,68 +109,51 @@ export default function TestimoniosPage() {
         </div>
       </div>
 
+      {/* Video testimonial destacado */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 font-playfair">Videos Testimoniales</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {videoTestimonials.map((video, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-50"
-            >
+        <h2 className="text-3xl font-bold text-center text-zinc-800 mb-12 font-playfair">Video Testimonial</h2>
+        <div className="max-w-4xl mx-auto">
+          <Card className="overflow-hidden border border-zinc-50 shadow-lg">
+            <CardContent className="p-0">
               <div className="relative">
-                <Image
-                  src={video.thumbnail || "/placeholder.svg"}
-                  alt={video.title}
-                  width={300}
-                  height={200}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                  <Button size="lg" className="rounded-full w-16 h-16 bg-orange-400 hover:bg-orange-500">
-                    <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </Button>
-                </div>
-                <div className="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-sm">
-                  {video.duration}
-                </div>
+                <video
+                  controls
+                  className="w-full h-[400px] md:h-[500px] object-cover"
+                  poster="/galeria/02.webp"
+                >
+                  <source src="/video-hero/video-hero.mp4" type="video/mp4" />
+                  Tu navegador no soporta el elemento de video.
+                </video>
               </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-gray-800">{video.title}</h3>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-zinc-800 mb-2">
+                  Experiencias reales de nuestros participantes
+                </h3>
+                <p className="text-zinc-600">
+                  Conoce de primera mano cómo el Método AdulMa ha transformado la vida de nuestros alumnos.
+                </p>
               </div>
-            </div>
-          ))}
+            </CardContent>
+          </Card>
         </div>
       </div>
 
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 font-playfair">Galería de Momentos</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[...Array(8)].map((_, index) => (
-            <div key={index} className="relative aspect-square">
-              <Image
-                src={`/placeholder.svg?height=250&width=250`}
-                alt={`Momento ${index + 1} en las clases del Método AdulMa`}
-                width={250}
-                height={250}
-                className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform cursor-pointer"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Testimonios visuales */}
+      <VisualTestimonials />
 
-      <div className="bg-gradient-to-r from-orange-25 to-orange-50 rounded-lg p-8 text-center border border-orange-100">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 font-playfair">¿Quieres Ser Parte de Estas Historias?</h2>
-        <p className="text-xl text-gray-500 mb-8 max-w-2xl mx-auto">
+      {/* Galería de fotos */}
+      <Gallery />
+
+      <div className="bg-gradient-to-r from-amber-25 to-amber-50 rounded-lg p-8 text-center border border-amber-100">
+        <h2 className="text-3xl font-bold text-zinc-800 mb-6 font-playfair">¿Quieres Ser Parte de Estas Historias?</h2>
+        <p className="text-xl text-zinc-500 mb-8 max-w-2xl mx-auto">
           Únete a nuestra comunidad y comienza tu propia transformación. ¡Tu testimonio podría ser el próximo!
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="text-lg px-8 py-4 bg-orange-400 hover:bg-orange-500">
+          <Button size="lg" className="text-lg px-8 py-4 bg-amber-400 hover:bg-amber-500">
             Conocer Nuestras Clases
           </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-transparent border-gray-200 hover:border-orange-300 text-gray-600 hover:text-orange-500">
+          <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-transparent border-zinc-200 hover:border-amber-300 text-zinc-600 hover:text-amber-500">
             Contactar por WhatsApp
           </Button>
         </div>

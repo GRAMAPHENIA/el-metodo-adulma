@@ -6,46 +6,46 @@
 
 #### **Layout Components**
 - **Header/Navbar** (`components/layout/header.tsx`)
-  - Logo: `orange-500` → `orange-400`
-  - Texto: `gray-900` → `gray-800`
-  - Enlaces: `gray-600` → `gray-500`
+  - Logo: `amber-500` → `amber-400`
+  - Texto: `zinc-900` → `zinc-800`
+  - Enlaces: `zinc-600` → `zinc-500`
   - Estados activos: Colores suavizados
-  - Botones CTA: `gray-900` → `gray-700`
+  - Botones CTA: `zinc-900` → `zinc-700`
 
 - **Footer** (`components/layout/footer.tsx`)
-  - Fondo: `bg-gray-900` → `bg-gray-800`
-  - Texto: `text-gray-300` → `text-gray-200`
-  - Bordes: `border-gray-800` → `border-gray-700`
+  - Fondo: `bg-zinc-900` → `bg-zinc-800`
+  - Texto: `text-zinc-300` → `text-zinc-200`
+  - Bordes: `border-zinc-800` → `border-zinc-700`
 
 #### **Section Components**
 - **Hero** (`components/sections/hero.tsx`)
-  - Fondo: `bg-gray-50` → `bg-gray-25`
-  - Títulos: `text-gray-900` → `text-gray-800`
-  - Subtítulos: `text-gray-600` → `text-gray-500`
+  - Fondo: `bg-zinc-50` → `bg-zinc-25`
+  - Títulos: `text-zinc-900` → `text-zinc-800`
+  - Subtítulos: `text-zinc-600` → `text-zinc-500`
   - Botones: Sombras suavizadas
 
 - **Method Summary** (`components/sections/method-summary.tsx`)
-  - Títulos: `text-gray-900` → `text-gray-800`
-  - Texto: `text-gray-600` → `text-gray-500`
+  - Títulos: `text-zinc-900` → `text-zinc-800`
+  - Texto: `text-zinc-600` → `text-zinc-500`
   - Íconos: Fondos más suaves
-  - Bordes: `border-gray-100` → `border-gray-50`
+  - Bordes: `border-zinc-100` → `border-zinc-50`
 
 - **Benefits** (`components/sections/benefits.tsx`)
-  - Fondo: `bg-gray-50` → `bg-gray-25`
+  - Fondo: `bg-zinc-50` → `bg-zinc-25`
   - Cards: Bordes y colores suavizados
   - Texto: Jerarquía visual mejorada
 
 #### **Formación Components**
 - **Formación Tabs** (`components/formacion/formacion-tabs.tsx`)
-  - Títulos: `text-gray-900` → `text-gray-800`
+  - Títulos: `text-zinc-900` → `text-zinc-800`
   - Tabs: Colores de estado suavizados
-  - Indicadores: `bg-orange-500` → `bg-orange-400`
+  - Indicadores: `bg-amber-500` → `bg-amber-400`
 
 #### **Pages**
 - **Clases** (`app/clases/page.tsx`)
-  - Fondo: `bg-gray-50` → `bg-gray-25`
+  - Fondo: `bg-zinc-50` → `bg-zinc-25`
   - Cards: Bordes y fondos suavizados
-  - Íconos: `bg-orange-100` → `bg-orange-50`
+  - Íconos: `bg-amber-100` → `bg-amber-50`
 
 - **Contacto** (`app/contacto/page.tsx`)
   - Cards de contacto: Colores suavizados
@@ -53,7 +53,7 @@
   - Gradientes: Tonos más suaves
 
 - **El Método** (`app/el-metodo/page.tsx`)
-  - Títulos: `text-gray-900` → `text-gray-800`
+  - Títulos: `text-zinc-900` → `text-zinc-800`
   - Cards: Bordes y fondos actualizados
   - Íconos: Fondos suavizados
 
@@ -71,24 +71,24 @@
 
 ### **Grises Suavizados**
 ```css
-gray-25:  #fafafa  /* Fondos ultra suaves */
-gray-50:  #f9fafb  /* Fondos principales */
-gray-100: #f3f4f6  /* Bordes suaves */
-gray-200: #e5e7eb  /* Separadores */
-gray-500: #6b7280  /* Texto secundario */
-gray-600: #4b5563  /* Texto principal suave */
-gray-700: #374151  /* Botones secundarios */
-gray-800: #1f2937  /* Títulos principales */
+zinc-25:  #fafafa  /* Fondos ultra suaves */
+zinc-50:  #f9fafb  /* Fondos principales */
+zinc-100: #f3f4f6  /* Bordes suaves */
+zinc-200: #e5e7eb  /* Separadores */
+zinc-500: #6b7280  /* Texto secundario */
+zinc-600: #4b5563  /* Texto principal suave */
+zinc-700: #374151  /* Botones secundarios */
+zinc-800: #1f2937  /* Títulos principales */
 ```
 
 ### **Naranjas Suavizados**
 ```css
-orange-25:  #fffcf5  /* Fondos ultra suaves */
-orange-50:  #fff7ed  /* Fondos de íconos */
-orange-100: #ffedd5  /* Hover states suaves */
-orange-200: #fed7aa  /* Elementos decorativos */
-orange-400: #fb923c  /* Color principal de marca */
-orange-500: #f97316  /* Estados activos */
+amber-25:  #fffcf5  /* Fondos ultra suaves */
+amber-50:  #fff7ed  /* Fondos de íconos */
+amber-100: #ffedd5  /* Hover states suaves */
+amber-200: #fed7aa  /* Elementos decorativos */
+amber-400: #fb923c  /* Color principal de marca */
+amber-500: #f97316  /* Estados activos */
 ```
 
 ## 📊 Métricas de Mejora
@@ -99,10 +99,10 @@ orange-500: #f97316  /* Estados activos */
 - **Mejora**: +25% cumplimiento
 
 ### **Ratios de Contraste Verificados**
-- `gray-800` sobre `white`: 12.6:1 (AAA) ✅
-- `gray-600` sobre `white`: 7.0:1 (AAA) ✅
-- `gray-500` sobre `white`: 4.6:1 (AA) ✅
-- `white` sobre `orange-400`: 4.8:1 (AA) ✅
+- `zinc-800` sobre `white`: 12.6:1 (AAA) ✅
+- `zinc-600` sobre `white`: 7.0:1 (AAA) ✅
+- `zinc-500` sobre `white`: 4.6:1 (AA) ✅
+- `white` sobre `amber-400`: 4.8:1 (AA) ✅
 
 ## 🔍 Componentes No Modificados
 

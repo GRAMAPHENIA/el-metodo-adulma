@@ -53,8 +53,8 @@ export default function ContactoPage() {
   return (
     <div className="py-16 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-playfair">Contacto</h1>
-        <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
+        <h1 className="text-4xl md:text-5xl font-bold text-zinc-800 mb-6 font-playfair">Contacto</h1>
+        <p className="text-xl text-zinc-500 max-w-3xl mx-auto leading-relaxed">
           Estamos aquí para responder todas tus consultas y ayudarte a comenzar tu camino hacia un envejecimiento activo
           y saludable
         </p>
@@ -62,16 +62,16 @@ export default function ContactoPage() {
 
       <div className="grid lg:grid-cols-3 gap-8 mb-16">
         {contactInfo.map((info, index) => (
-          <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow border border-gray-50">
+          <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow border border-zinc-50">
             <CardHeader>
-              <div className="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <info.icon className="w-8 h-8 text-orange-400" />
+              <div className="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <info.icon className="w-8 h-8 text-amber-400" />
               </div>
-              <CardTitle className="text-xl text-gray-800">{info.title}</CardTitle>
+              <CardTitle className="text-xl text-zinc-800">{info.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600 mb-4 whitespace-pre-line">{info.content}</p>
-              <Button variant="outline" className="w-full bg-transparent border-gray-200 hover:border-orange-300 text-gray-600 hover:text-orange-500">
+              <p className="text-zinc-600 mb-4 whitespace-pre-line">{info.content}</p>
+              <Button variant="outline" className="w-full bg-transparent border-zinc-200 hover:border-amber-300 text-zinc-600 hover:text-amber-500">
                 {info.action}
               </Button>
             </CardContent>
@@ -81,29 +81,29 @@ export default function ContactoPage() {
 
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 font-playfair">Horarios de Atención</h2>
-          <Card className="border border-gray-50">
+          <h2 className="text-3xl font-bold text-zinc-800 mb-8 font-playfair">Horarios de Atención</h2>
+          <Card className="border border-zinc-50">
             <CardContent className="p-6">
               <div className="space-y-4">
                 {schedule.map((item, index) => (
                   <div
                     key={index}
-                    className="flex justify-between items-center py-2 border-b border-gray-50 last:border-b-0"
+                    className="flex justify-between items-center py-2 border-b border-zinc-50 last:border-b-0"
                   >
-                    <span className="font-medium text-gray-800">{item.day}</span>
-                    <span className="text-gray-500">{item.hours}</span>
+                    <span className="font-medium text-zinc-800">{item.day}</span>
+                    <span className="text-zinc-500">{item.hours}</span>
                   </div>
                 ))}
               </div>
             </CardContent>
           </Card>
 
-          <div className="mt-8 bg-orange-25 p-6 rounded-lg border border-orange-100">
+          <div className="mt-8 bg-amber-25 p-6 rounded-lg border border-amber-100">
             <div className="flex items-start gap-3">
-              <Clock className="w-6 h-6 text-orange-400 mt-1" />
+              <Clock className="w-6 h-6 text-amber-400 mt-1" />
               <div>
-                <h3 className="font-semibold text-orange-700 mb-2">Consultas Fuera de Horario</h3>
-                <p className="text-orange-600">
+                <h3 className="font-semibold text-amber-700 mb-2">Consultas Fuera de Horario</h3>
+                <p className="text-amber-600">
                   Para consultas urgentes o fuera del horario de atención, puedes escribirnos por WhatsApp. Te
                   responderemos a la brevedad.
                 </p>
@@ -113,56 +113,56 @@ export default function ContactoPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 font-playfair">Cómo Llegar</h2>
-          <div className="bg-gray-100 rounded-lg h-64 mb-6 flex items-center justify-center">
-            <p className="text-gray-400">Mapa interactivo de Google Maps</p>
+          <h2 className="text-3xl font-bold text-zinc-800 mb-8 font-playfair">Cómo Llegar</h2>
+          <div className="bg-zinc-100 rounded-lg h-64 mb-6 flex items-center justify-center">
+            <p className="text-zinc-400">Mapa interactivo de Google Maps</p>
           </div>
 
-          <div className="space-y-4 text-gray-600">
+          <div className="space-y-4 text-zinc-600">
             <div>
-              <h3 className="font-semibold text-gray-800 mb-2">🚂 En Tren</h3>
+              <h3 className="font-semibold text-zinc-800 mb-2">🚂 En Tren</h3>
               <p>Estación Olivos (Línea Mitre) - 3 cuadras caminando</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-800 mb-2">🚌 En Colectivo</h3>
+              <h3 className="font-semibold text-zinc-800 mb-2">🚌 En Colectivo</h3>
               <p>Líneas: 60, 152, 166, 168 - Parada Av. Maipú y Corrientes</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-800 mb-2">🚗 En Auto</h3>
+              <h3 className="font-semibold text-zinc-800 mb-2">🚗 En Auto</h3>
               <p>Estacionamiento disponible en la zona. Acceso fácil desde Panamericana.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-white rounded-lg p-8 shadow-lg mb-12 border border-gray-50">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8 font-playfair">Envíanos tu Consulta</h2>
+      <div className="bg-white rounded-lg p-8 shadow-lg mb-12 border border-zinc-50">
+        <h2 className="text-3xl font-bold text-center text-zinc-800 mb-8 font-playfair">Envíanos tu Consulta</h2>
         <form className="max-w-2xl mx-auto space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-600 mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-zinc-600 mb-2">
                 Nombre completo *
               </label>
               <Input id="name" required className="text-lg p-3" />
             </div>
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-600 mb-2">
+              <label htmlFor="phone" className="block text-sm font-medium text-zinc-600 mb-2">
                 Teléfono
               </label>
               <Input id="phone" type="tel" className="text-lg p-3" />
             </div>
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-600 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-zinc-600 mb-2">
               Email *
             </label>
             <Input id="email" type="email" required className="text-lg p-3" />
           </div>
           <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-gray-600 mb-2">
+            <label htmlFor="subject" className="block text-sm font-medium text-zinc-600 mb-2">
               Asunto
             </label>
-            <select id="subject" className="w-full text-lg p-3 border border-gray-200 rounded-md text-gray-600">
+            <select id="subject" className="w-full text-lg p-3 border border-zinc-200 rounded-md text-zinc-600">
               <option value="">Selecciona un tema</option>
               <option value="clases">Consulta sobre clases</option>
               <option value="formacion">Formación profesional</option>
@@ -172,7 +172,7 @@ export default function ContactoPage() {
             </select>
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-600 mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-zinc-600 mb-2">
               Mensaje *
             </label>
             <Textarea
@@ -184,7 +184,7 @@ export default function ContactoPage() {
             />
           </div>
           <div className="text-center">
-            <Button type="submit" size="lg" className="text-lg px-8 py-4 bg-orange-400 hover:bg-orange-500">
+            <Button type="submit" size="lg" className="text-lg px-8 py-4 bg-amber-400 hover:bg-amber-500">
               Enviar Consulta
             </Button>
           </div>
@@ -192,9 +192,9 @@ export default function ContactoPage() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
-        <div className="bg-gradient-to-r from-orange-25 to-orange-50 p-8 rounded-lg text-center border border-orange-100">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4 font-playfair">¿Listo para Comenzar?</h3>
-          <p className="text-gray-600 mb-6">
+        <div className="bg-gradient-to-r from-amber-25 to-amber-50 p-8 rounded-lg text-center border border-amber-100">
+          <h3 className="text-2xl font-bold text-zinc-800 mb-4 font-playfair">¿Listo para Comenzar?</h3>
+          <p className="text-zinc-600 mb-6">
             Reserva tu primera clase gratuita y descubre los beneficios del Método AdulMa
           </p>
           <Link
@@ -202,21 +202,21 @@ export default function ContactoPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button size="lg" className="text-lg px-8 py-4 bg-orange-400 hover:bg-orange-500">
+            <Button size="lg" className="text-lg px-8 py-4 bg-amber-400 hover:bg-amber-500">
               <MessageCircle className="w-5 h-5 mr-2" />
               Reservar Clase Gratuita
             </Button>
           </Link>
         </div>
 
-        <div className="bg-gradient-to-r from-gray-25 to-gray-50 p-8 rounded-lg text-center border border-gray-100">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4 font-playfair">Síguenos en Redes</h3>
-          <p className="text-gray-600 mb-6">Mantente al día con tips, ejercicios y novedades del Método AdulMa</p>
+        <div className="bg-gradient-to-r from-zinc-25 to-zinc-50 p-8 rounded-lg text-center border border-zinc-100">
+          <h3 className="text-2xl font-bold text-zinc-800 mb-4 font-playfair">Síguenos en Redes</h3>
+          <p className="text-zinc-600 mb-6">Mantente al día con tips, ejercicios y novedades del Método AdulMa</p>
           <div className="flex justify-center space-x-4">
-            <Button variant="outline" size="lg" className="border-gray-200 hover:border-orange-300 text-gray-600 hover:text-orange-500">
+            <Button variant="outline" size="lg" className="border-zinc-200 hover:border-amber-300 text-zinc-600 hover:text-amber-500">
               Facebook
             </Button>
-            <Button variant="outline" size="lg" className="border-gray-200 hover:border-orange-300 text-gray-600 hover:text-orange-500">
+            <Button variant="outline" size="lg" className="border-zinc-200 hover:border-amber-300 text-zinc-600 hover:text-amber-500">
               Instagram
             </Button>
           </div>

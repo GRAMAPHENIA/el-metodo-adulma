@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} bg-white text-gray-900`}>
+      <body className={`${inter.className} bg-white text-zinc-900`}>
         <Header />
         <main>{children}</main>
         <Footer />

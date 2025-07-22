@@ -62,10 +62,10 @@ export default function ElMetodoPage() {
     <div className="pt-32 pb-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-800 mb-6 font-playfair">
+          <h1 className="text-5xl font-bold text-zinc-800 mb-6 font-playfair">
             El Método AdulMa
           </h1>
-          <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-zinc-500 max-w-3xl mx-auto leading-relaxed">
             Un enfoque integral que combina actividad física y estimulación
             cognitiva para promover el envejecimiento activo y saludable
           </p>
@@ -73,10 +73,10 @@ export default function ElMetodoPage() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 font-playfair">
+            <h2 className="text-3xl font-bold text-zinc-800 mb-6 font-playfair">
               Nuestra Historia
             </h2>
-            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+            <div className="space-y-6 text-lg text-zinc-600 leading-relaxed">
               <p>
                 El Método AdulMa nació de la necesidad de crear un espacio
                 integral donde los adultos mayores pudieran mantenerse activos
@@ -97,33 +97,33 @@ export default function ElMetodoPage() {
           </div>
           <div className="relative">
             <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="Adultos mayores realizando actividades del Método AdulMa"
-              width={600}
+              src="/flag/el-metodo.jpg"
+              alt="El Método AdulMa - Enfoque integral para adultos mayores"
+              width={400}
               height={400}
-              className="rounded-2xl shadow-lg"
+              className="rounded-2xl shadow-lg object-cover"
             />
           </div>
         </div>
 
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 font-playfair">
+          <h2 className="text-3xl font-bold text-center text-zinc-800 mb-12 font-playfair">
             Los Pilares de Nuestro Método
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pillars.map((pillar, index) => (
               <Card
                 key={index}
-                className="border border-gray-50 hover:shadow-lg transition-shadow duration-300"
+                className="border border-zinc-50 hover:shadow-lg transition-shadow duration-300"
               >
                 <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6">
-                    <pillar.icon className="w-6 h-6 text-orange-400" />
+                  <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
+                    <pillar.icon className="w-6 h-6 text-amber-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                  <h3 className="text-xl font-semibold text-zinc-800 mb-4">
                     {pillar.title}
                   </h3>
-                  <p className="text-gray-500 leading-relaxed">
+                  <p className="text-zinc-500 leading-relaxed">
                     {pillar.description}
                   </p>
                 </CardContent>
@@ -132,21 +132,21 @@ export default function ElMetodoPage() {
           </div>
         </div>
 
-        <Card className="border border-gray-50 shadow-lg">
+        <Card className="border border-zinc-50 shadow-lg">
           <CardContent className="p-12">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 font-playfair">
+            <h2 className="text-3xl font-bold text-center text-zinc-800 mb-12 font-playfair">
               ¿Qué Hace Único a Nuestro Método?
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {uniqueFeatures.map((feature, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <feature.icon className="w-8 h-8 text-orange-400" />
+                  <div className="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <feature.icon className="w-8 h-8 text-amber-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                  <h3 className="text-xl font-semibold text-zinc-800 mb-4">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-500 leading-relaxed">
+                  <p className="text-zinc-500 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

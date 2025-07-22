@@ -26,15 +26,15 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gray-25">
+    <section className="py-20 px-4 bg-zinc-25">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-gray-800 mb-6 font-playfair">
+            <h2 className="text-4xl font-bold text-zinc-800 mb-6 font-playfair">
               Beneficios comprobados del Método AdulMa
             </h2>
 
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+            <p className="text-xl text-zinc-600 mb-10 leading-relaxed">
               Nuestros participantes experimentan mejoras significativas en su
               calidad de vida a través de nuestro enfoque integral y
               personalizado.
@@ -44,10 +44,10 @@ export default function Benefits() {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex items-start space-x-3 p-4 bg-white rounded-xl border border-gray-50"
+                  className="flex items-start space-x-3 p-4 bg-white rounded-xl border border-zinc-50"
                 >
-                  <benefit.icon className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">
+                  <benefit.icon className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" />
+                  <span className="text-zinc-700 font-medium">
                     {benefit.text}
                   </span>
                 </div>
@@ -57,7 +57,7 @@ export default function Benefits() {
             <Link href="/testimonios">
               <Button
                 size="lg"
-                className="bg-orange-400 hover:bg-orange-500 text-white px-8 py-4 text-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
+                className="bg-amber-400 hover:bg-amber-500 text-white px-8 py-4 text-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
               >
                 Ver testimonios reales
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -65,66 +65,66 @@ export default function Benefits() {
             </Link>
           </div>
 
-          <Card className="border border-gray-50 shadow-lg">
+          <Card className="border border-zinc-50 shadow-lg">
             <CardContent className="p-10">
               <div className="text-center mb-8">
-                <div className="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Calendar className="w-8 h-8 text-orange-400" />
+                <div className="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Calendar className="w-8 h-8 text-amber-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-3 font-playfair">
+                <h3 className="text-2xl font-bold text-zinc-800 mb-3 font-playfair">
                   Tu transformación comienza hoy
                 </h3>
-                <p className="text-gray-500 text-lg">
+                <p className="text-zinc-500 text-lg">
                   Primera clase completamente gratuita. Sin compromisos, solo
                   resultados.
                 </p>
               </div>
 
               <div className="space-y-6">
-                <Card className="border border-gray-50">
+                <Card className="border border-zinc-50">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-3 mb-3">
-                      <div className="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-amber-400 rounded-full flex items-center justify-center">
                         <span className="text-white font-bold text-sm">1</span>
                       </div>
-                      <h4 className="font-semibold text-gray-800">
+                      <h4 className="font-semibold text-zinc-800">
                         Experiencia completa
                       </h4>
                     </div>
-                    <p className="text-gray-500">
+                    <p className="text-zinc-500">
                       Participa en una sesión integral sin costo para vivir
                       nuestro método
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card className="border border-gray-50">
+                <Card className="border border-zinc-50">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-3 mb-3">
-                      <div className="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-amber-400 rounded-full flex items-center justify-center">
                         <span className="text-white font-bold text-sm">2</span>
                       </div>
-                      <h4 className="font-semibold text-gray-800">
+                      <h4 className="font-semibold text-zinc-800">
                         Evaluación personalizada
                       </h4>
                     </div>
-                    <p className="text-gray-500">
+                    <p className="text-zinc-500">
                       Diseñamos juntos tu camino hacia el bienestar integral
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card className="border border-gray-50">
+                <Card className="border border-zinc-50">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-3 mb-3">
-                      <div className="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-amber-400 rounded-full flex items-center justify-center">
                         <span className="text-white font-bold text-sm">3</span>
                       </div>
-                      <h4 className="font-semibold text-gray-800">
+                      <h4 className="font-semibold text-zinc-800">
                         Programa a medida
                       </h4>
                     </div>
-                    <p className="text-gray-500">
+                    <p className="text-zinc-500">
                       Tu plan único para maximizar resultados y disfrutar el
                       proceso
                     </p>
@@ -134,7 +134,7 @@ export default function Benefits() {
 
               <div className="mt-8 text-center">
                 <Link href="/contacto">
-                  <Button className="w-full bg-orange-400 hover:bg-orange-500 text-white py-4 text-lg rounded-xl font-medium shadow-sm hover:shadow-md transition-all duration-200">
+                  <Button className="w-full bg-amber-400 hover:bg-amber-500 text-white py-4 text-lg rounded-xl font-medium shadow-sm hover:shadow-md transition-all duration-200">
                     Reservar mi clase gratuita
                   </Button>
                 </Link>

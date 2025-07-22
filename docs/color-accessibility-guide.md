@@ -9,37 +9,37 @@ Esta guía documenta las mejoras de accesibilidad implementadas en el sitio web,
 ### Header/Navbar
 | Elemento | Antes | Después | Mejora |
 |----------|-------|---------|---------|
-| Logo | `bg-orange-500` | `bg-orange-400` | Menos saturación |
-| Texto principal | `text-gray-900` | `text-gray-800` | Menos contraste agresivo |
-| Enlaces | `text-gray-600` | `text-gray-500` | Transición más suave |
-| Estados activos | `bg-orange-500` | `bg-orange-400` | Consistencia visual |
-| Botón CTA | `bg-gray-900` | `bg-gray-700` | Menos intensidad |
+| Logo | `bg-amber-500` | `bg-amber-400` | Menos saturación |
+| Texto principal | `text-zinc-900` | `text-zinc-800` | Menos contraste agresivo |
+| Enlaces | `text-zinc-600` | `text-zinc-500` | Transición más suave |
+| Estados activos | `bg-amber-500` | `bg-amber-400` | Consistencia visual |
+| Botón CTA | `bg-zinc-900` | `bg-zinc-700` | Menos intensidad |
 
 ### Hero Section
 | Elemento | Antes | Después | Mejora |
 |----------|-------|---------|---------|
-| Fondo | `bg-gray-50` | `bg-gray-25` | Ultra suave |
-| Título | `text-gray-900` | `text-gray-800` | Menos fatiga visual |
-| Subtítulo | `text-gray-600` | `text-gray-500` | Jerarquía suave |
-| Descripción | `text-gray-700` | `text-gray-600` | Lectura cómoda |
+| Fondo | `bg-zinc-50` | `bg-zinc-25` | Ultra suave |
+| Título | `text-zinc-900` | `text-zinc-800` | Menos fatiga visual |
+| Subtítulo | `text-zinc-600` | `text-zinc-500` | Jerarquía suave |
+| Descripción | `text-zinc-700` | `text-zinc-600` | Lectura cómoda |
 | Sombras | `shadow-md` | `shadow-sm` | Menos distracción |
 
 ### Cards y Componentes
 | Elemento | Antes | Después | Mejora |
 |----------|-------|---------|---------|
-| Títulos | `text-gray-900` | `text-gray-800` | Menos intensidad |
-| Texto | `text-gray-600` | `text-gray-500` | Lectura prolongada |
-| Íconos | `from-orange-100` | `from-orange-50` | Fondos más suaves |
-| Bordes | `border-gray-100` | `border-gray-50` | Separación sutil |
-| Decorativos | `bg-orange-300` | `bg-orange-200` | Menos distracción |
+| Títulos | `text-zinc-900` | `text-zinc-800` | Menos intensidad |
+| Texto | `text-zinc-600` | `text-zinc-500` | Lectura prolongada |
+| Íconos | `from-amber-100` | `from-amber-50` | Fondos más suaves |
+| Bordes | `border-zinc-100` | `border-zinc-50` | Separación sutil |
+| Decorativos | `bg-amber-300` | `bg-amber-200` | Menos distracción |
 
 ### Footer
 | Elemento | Antes | Después | Mejora |
 |----------|-------|---------|---------|
-| Fondo | `bg-gray-900` | `bg-gray-800` | Menos agresivo |
-| Texto principal | `text-gray-300` | `text-gray-200` | Mejor legibilidad |
-| Botones sociales | `bg-gray-800` | `bg-gray-700` | Contraste suave |
-| Divisores | `border-gray-800` | `border-gray-700` | Separación clara |
+| Fondo | `bg-zinc-900` | `bg-zinc-800` | Menos agresivo |
+| Texto principal | `text-zinc-300` | `text-zinc-200` | Mejor legibilidad |
+| Botones sociales | `bg-zinc-800` | `bg-zinc-700` | Contraste suave |
+| Divisores | `border-zinc-800` | `border-zinc-700` | Separación clara |
 
 ## 🔍 Análisis de Contraste
 
@@ -47,17 +47,17 @@ Esta guía documenta las mejoras de accesibilidad implementadas en el sitio web,
 
 #### Textos Principales
 ```
-gray-800 sobre white: 12.6:1 (AAA) ✅
+zinc-800 sobre white: 12.6:1 (AAA) ✅
 - Títulos principales
 - Navegación activa
 - Contenido importante
 
-gray-600 sobre white: 7.0:1 (AAA) ✅
+zinc-600 sobre white: 7.0:1 (AAA) ✅
 - Texto descriptivo
 - Contenido secundario
 - Párrafos largos
 
-gray-500 sobre white: 4.6:1 (AA) ✅
+zinc-500 sobre white: 4.6:1 (AA) ✅
 - Enlaces de navegación
 - Subtítulos
 - Metadatos
@@ -65,12 +65,12 @@ gray-500 sobre white: 4.6:1 (AA) ✅
 
 #### Elementos Interactivos
 ```
-white sobre orange-400: 4.8:1 (AA) ✅
+white sobre amber-400: 4.8:1 (AA) ✅
 - Botones primarios
 - Estados activos
 - Llamadas a la acción
 
-white sobre gray-700: 8.9:1 (AAA) ✅
+white sobre zinc-700: 8.9:1 (AAA) ✅
 - Botones secundarios
 - Footer principal
 - Elementos de contraste
