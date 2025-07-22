@@ -20,6 +20,18 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
+
   const navigation = [
     { name: "Inicio", href: "/" },
     { name: "El Método", href: "/el-metodo" },
@@ -35,121 +47,121 @@ export default function Header() {
 
   return (
     <>
-      {/* Backdrop for mobile menu */}
-      {isMenuOpen && (
-        <div
-          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
-          onClick={() => setIsMenuOpen(false)}
-        />
-      )}
-
-      <header className="fixed top-0 left-0 right-0 z-50">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+          isScrolled
+            ? "border-b border-zinc-200/50 bg-white/80 shadow-sm backdrop-blur-lg"
+            : ""
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav
-            className={`mt-6 transition-all duration-500 ease-out ${isScrolled
-                ? "bg-white/95 backdrop-blur-xl shadow-xl shadow-black/5 border border-zinc-200/60"
-                : "bg-white/80 backdrop-blur-lg shadow-lg border border-zinc-200/40"
-              } rounded-full`}
-          >
-            <div className="flex items-center justify-between px-6 lg:px-8 py-4">
-              {/* Logo */}
-              <Link href="/" className="flex items-center space-x-3 group">
-                <div className="flex items-center space-x-3">
-                  <Image
-                    src="/flag/brand.png"
-                    alt="El Método AdulMa"
-                    width={120}
-                    height={32}
-                    className="h-12 w-auto rounded-full"
-                    priority
-                  />
-                </div>
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link href="/" className="flex items-center space-x-2 group">
+              <Image
+                src="/flag/brand.png"
+                alt="El Método AdulMa"
+                width={180}
+                height={180}
+                className="h-10 w-20 rounded-xl object-cover"
+                priority
+              />
+            </Link>
+
+            {/* CTA + Menu Button */}
+            <div className="flex items-center space-x-4">
+              <Link href="/contacto" className="hidden sm:block">
+                <Button
+                  size="sm"
+                  className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 group ${
+                    isScrolled
+                      ? "bg-zinc-800 hover:bg-zinc-900 text-white"
+                      : "bg-white/90 hover:bg-white text-zinc-800"
+                  }`}
+                >
+                  Contactar
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </Link>
 
-              {/* Desktop Navigation */}
-              <div className="hidden lg:flex items-center space-x-1">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${isActive(item.href)
-                        ? "bg-amber-500/30 text-zinc-700 shadow-sm"
-                        : "text-zinc-500 hover:text-zinc-700 hover:bg-zinc-50"
-                      }`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-
-              {/* CTA + Mobile Menu */}
-              <div className="flex items-center space-x-4">
-                <Link href="/contacto" className="hidden lg:block">
-                  <Button
-                    size="sm"
-                    className="bg-zinc-700 hover:bg-zinc-800 text-white rounded-full px-6 py-2 text-sm font-medium transition-all duration-200 group"
-                  >
-                    Contactar
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-0.5 transition-transform" />
-                  </Button>
-                </Link>
-
-                {/* Mobile menu button */}
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="lg:hidden p-2 rounded-full hover:bg-zinc-50"
-                >
-                  {isMenuOpen ? (
-                    <X className="h-5 w-5 text-zinc-500" />
-                  ) : (
-                    <Menu className="h-5 w-5 text-zinc-500" />
-                  )}
-                </Button>
-              </div>
-            </div>
-          </nav>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div className={`lg:hidden transition-all duration-300 ease-out ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
-          }`}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="mt-4 bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl border border-zinc-200/60 overflow-hidden">
-              <div className="px-6 py-6">
-                <div className="space-y-2">
-                  {navigation.map((item, index) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className={`block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${isActive(item.href)
-                          ? "bg-amber-400 text-white"
-                          : "text-zinc-500 hover:text-zinc-700 hover:bg-zinc-50"
-                        }`}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-
-                <div className="mt-6 pt-6 border-t border-zinc-200">
-                  <Link href="/contacto">
-                    <Button
-                      className="w-full bg-zinc-700 hover:bg-zinc-800 text-white rounded-xl py-3 text-sm font-medium group"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Contactar
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-0.5 transition-transform" />
-                    </Button>
-                  </Link>
-                </div>
-              </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMenuOpen(true)}
+                className={`rounded-full transition-colors duration-300 ${
+                  isScrolled
+                    ? "text-zinc-600 hover:bg-zinc-100"
+                    : "text-white hover:bg-white/20"
+                }`}
+              >
+                <span className="sr-only">Abrir menú</span>
+                <Menu className="h-6 w-6" />
+              </Button>
             </div>
           </div>
         </div>
       </header>
+
+      {/* --- Navigation Panel --- */}
+
+      {/* Backdrop */}
+      <div
+        className={`fixed inset-0 bg-black/30 backdrop-blur-sm z-50 transition-opacity duration-300 ease-in-out ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
+
+      {/* Panel */}
+      <div
+        className={`fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="h-full flex flex-col">
+          <div className="flex items-center justify-between px-6 h-20 border-b">
+            <h2 className="font-semibold text-lg">Menú</h2>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(false)}
+              className="rounded-full"
+            >
+              <X className="h-6 w-6 text-zinc-500" />
+              <span className="sr-only">Cerrar menú</span>
+            </Button>
+          </div>
+
+          <nav className="flex-grow p-6">
+            <ul className="flex flex-col space-y-2">
+              {navigation.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block w-full px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200 ${
+                      isActive(item.href)
+                        ? "bg-amber-100 text-amber-800"
+                        : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="p-6 border-t">
+            <Link href="/contacto" onClick={() => setIsMenuOpen(false)}>
+              <Button className="w-full bg-zinc-800 hover:bg-zinc-900 text-white rounded-xl py-3 text-sm font-medium group">
+                Contactar
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
