@@ -70,13 +70,14 @@ export default function Header() {
 
             {/* CTA + Menu Button */}
             <div className="flex items-center space-x-4">
+              
               <Link href="/contacto" className="hidden sm:block">
                 <Button
                   size="sm"
                   className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 group ${
                     isScrolled
                       ? "bg-zinc-800 hover:bg-zinc-900 text-white"
-                      : "bg-white/90 hover:bg-white text-zinc-800"
+                      : "bg-white/90 hover:bg-white text-zinc-800 border border-zinc-200/80"
                   }`}
                 >
                   Contactar
@@ -91,7 +92,7 @@ export default function Header() {
                 className={`rounded-full transition-colors duration-300 ${
                   isScrolled
                     ? "text-zinc-600 hover:bg-zinc-100"
-                    : "text-white hover:bg-white/20"
+                    : "text-zinc-800 hover:bg-black/10"
                 }`}
               >
                 <span className="sr-only">Abrir menú</span>
